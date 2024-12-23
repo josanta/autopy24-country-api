@@ -40,6 +40,7 @@ export default function Home() {
   }
 
   const getCities = async (e) => {
+    setCities([])
     const city_url = `https://api-dev.autoby24.ch/api/core/city?state=${e.target.value}&limit=all`
     const resp = await fetch(city_url, {
       cache: 'no-store'
