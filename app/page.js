@@ -25,6 +25,7 @@ export default function Home() {
 
   const getStates = async (e) => {
     setStates([]);
+    setCities([])
     // setSelectedCountry()
     const fstate_url = `https://api-dev.autoby24.ch/api/core/state?country=${e.target.value}&limit=all`;
     const resp = await fetch(fstate_url, {
