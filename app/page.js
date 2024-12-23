@@ -21,7 +21,7 @@ export default function Home() {
   }
   useEffect(() => {
     getcountries()
-  }, []);
+  });
 
   const getStates = async (e) => {
     setStates([]);
