@@ -21,7 +21,7 @@ export default function Home() {
   }
   useEffect(() => {
     getcountries()
-  });
+  }, []);
 
   const getStates = async (e) => {
     setStates([]);
@@ -77,7 +77,7 @@ export default function Home() {
         </div>
         <div className="mb-o">
           <select className="select select-primary w-full max-w-xs" disabled={cityStatus}>
-            <option disabled selected>Select City</option>
+            <option selected>Select City</option>
             {cities.map((city) => {
               return <option key={city.uuid} value={city.name} >{city.name}</option>
             })}
